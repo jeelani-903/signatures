@@ -1,0 +1,269 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeelani's profile</title>
+  <style>
+    :root {
+      --primary: #1f3f82;
+      --accent: #dce3f6;
+      --gray: #f8f9fc;
+      --text: #2c3e50;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--gray);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1614282159666-cb778ce1ef4c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 320px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 40px;
+      color: white;
+    }
+
+    .hero-overlay {
+      background-color: rgba(31, 63, 130, 0.85);
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(3px);
+    }
+
+    .hero-overlay h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .hero-overlay p {
+      font-size: 1.1rem;
+      margin-top: 5px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: -70px auto 60px;
+      background-color: white;
+      padding: 50px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .section-title {
+      position: relative;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .section-title::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 60px;
+      height: 4px;
+      background-color: var(--primary);
+      border-radius: 3px;
+    }
+
+    .profile-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .profile-img img {
+      width: 220px;
+      height: 220px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 5px solid var(--accent);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img img:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-body {
+      flex: 1;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--primary);
+    }
+
+    .role {
+      font-size: 1.1rem;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      color: #4a90e2;
+    }
+
+    .bio {
+      background-color: var(--gray);
+      padding: 20px 25px;
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .details dt {
+      font-weight: 600;
+      margin-top: 15px;
+      color: var(--primary);
+    }
+
+    .details dd {
+      margin: 0 0 10px 0;
+    }
+
+    .contact {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact a {
+      text-decoration: none;
+      background: var(--primary);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .contact a:hover {
+      background: #153265;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 40px 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .profile-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-img img {
+        width: 160px;
+        height: 160px;
+      }
+
+      .contact {
+        justify-content: center;
+      }
+
+      .container {
+        margin: -50px 15px 40px;
+        padding: 30px 20px;
+      }
+
+      .hero {
+        padding: 20px;
+        height: 260px;
+      }
+
+      .hero-overlay {
+        padding: 15px 20px;
+      }
+
+      .hero-overlay h1 {
+        font-size: 2rem;
+      }
+
+      .hero-overlay p {
+        font-size: 1rem;
+      }
+
+      .name {
+        font-size: 1.6rem;
+      }
+
+      .role {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 25px 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>Mohammed Jeelani S M</h1>
+      <p>Data Scientist and Ai developer, Chennai</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="section-title">Employee Profile</div>
+
+    <div class="profile-grid">
+      <div class="profile-img">
+        <img src="image.jpg" alt="Arrow Zhang">
+      </div>
+      <div class="profile-body">
+        <h2 class="name">Mohammed Jeelani S M</h2>
+        <div class="role">Digitialization Executive</div>
+
+        <section class="bio">
+          <p>I am an AI and Python Developer, Data Scientist, and Web Developer, currently working as a Digitalization Executive. I specialize in building intelligent software systems, maintaining enterprise-level websites, and developing custom billing and automation solutions tailored to business needs.
+
+In my role, I handle the design and development of dynamic websites, customer-facing chatbots, and AI-powered tools that streamline operations and enhance digital experiences. With strong expertise in Python, data analytics, and full-stack web technologies, I bridge the gap between traditional business processes and next-gen automation.</p>
+          <p>With a background in maritime and aviation sectors, Arrow advises on complex financing deals and infrastructure projects across Asia-Pacific.</p>
+        </section>
+
+        <dl class="details">
+          <dt>Employee Code:</dt><dd>ECS-005</dd>
+          <dt>Education:</dt><dd>Artificial Intelligence and Data Science</dd>
+          <dt>Specialisms:</dt><dd>End-to-end digital transformation, Workflow optimization & digital process design, AI-powered automation & chatbot development</dd>
+        </dl>
+
+        <div class="contact">
+          <a href="mailto:digital@seapol.com">📧 Email</a>
+          <a href="https://www.linkedin.com" target="_blank">🔗 LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html> -->

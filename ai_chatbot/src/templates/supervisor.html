@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supervisor Query Dashboard</title>
+    <style>
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Supervisor Dashboard</h2>
+    <table>
+        <tr>
+            <th>Query ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Query</th>
+            <th>Reply</th>
+            <th>Reply Timestamp</th>
+            <th>Action</th>
+        </tr>
+        {% for row in queries %}
+        <tr>
+            <form method="POST">
+                <td>{{ row["Query ID"] }}<input type="hidden" name="query_id" value="{{ row['Query ID'] }}"></td>
+                <td>{{ row["Name"] }}</td>
+                <td>{{ row["Contact"] }}</td>
+                <td>{{ row["Email"] }}</td>
+                <td>{{ row["Query"] }}</td>
+                <td><textarea name="reply">{{ row["Reply"] or "" }}</textarea></td>
+                <td>{{ row["Reply Timestamp"] or "" }}</td>
+                <td><button type="submit">Send Reply</button></td>
+            </form>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
